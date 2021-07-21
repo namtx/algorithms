@@ -1,18 +1,11 @@
-package dev.namtx.leetcode;
+package dev.namtx.leetcode.longestvalidparentheses;
 
 import com.sun.tools.javac.util.Pair;
 
 import java.util.Stack;
 
-public class LongestValidParentheses {
-    public static void main(String[] args) {
-        System.out.println(longestValidParentheses("(()())"));
-    }
-
-    public static int longestValidParentheses(String s) {
-        int max = 0;
-        int temp = 0;
-
+public class Solution {
+    public int longestValidParentheses(String s) {
         Stack<Pair<Character, Integer>> stack = new Stack<>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -32,5 +25,12 @@ public class LongestValidParentheses {
         }
 
         return Integer.max(s.length(), 1);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.longestValidParentheses("(()())"));
     }
 }

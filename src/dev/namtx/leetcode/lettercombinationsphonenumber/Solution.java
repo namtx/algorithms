@@ -1,15 +1,11 @@
-package dev.namtx.leetcode;
+package dev.namtx.leetcode.lettercombinationsphonenumber;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class LetterCombinationsPhoneNumber {
-    public static void main(String[] args) {
-        System.out.println(letterCombinations("5"));
-    }
-
-    public static List<String> letterCombinations(String digits) {
+public class Solution {
+    public List<String> letterCombinations(String digits) {
         HashMap<Character, String[]> mapping = new HashMap<>();
         mapping.put('2', new String[]{"a", "b", "c"});
         mapping.put('3', new String[]{"d", "e", "f"});
@@ -39,5 +35,12 @@ public class LetterCombinationsPhoneNumber {
             backtrack(digits, mapping, result, temp, i+1);
             temp = temp.substring(0, temp.length() - 1);
         }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.letterCombinations("55"));
     }
 }

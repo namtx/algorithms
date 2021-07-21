@@ -1,16 +1,7 @@
-package dev.namtx.leetcode;
+package dev.namtx.leetcode.permutation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-public class Permutation {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.permute(new int[]{1,2,3}));
-    }
-}
 
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
@@ -34,5 +25,12 @@ class Solution {
                 tmp.remove(tmp.size() - 1);
             }
         }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.permute(new int[]{1,2,3}));
     }
 }
