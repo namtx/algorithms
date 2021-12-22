@@ -2,6 +2,7 @@ package dev.namtx.leetcode.zigzagconversion;
 
 import java.util.ArrayList;
 
+// https://leetcode.com/problems/zigzag-conversion/
 public class Solution {
     public String convert(String s, int numRows) {
         ArrayList<ArrayList<Character>> zigzag = new ArrayList<>();
